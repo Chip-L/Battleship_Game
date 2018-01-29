@@ -1,12 +1,12 @@
 /****************************** Universal Styles ******************************/
-
 html {
-  font-family: Helvetica;
+  font-family: "Work Sans", sans-serif;
   font-size: 16px;
 }
 
-.mobile-show {
-  display: none;
+body {
+  background-color: rgb(255, 242,  242);
+  color: rgb(32, 64, 86);
 }
 
 .image-container {
@@ -30,7 +30,140 @@ html {
   display: none;
 }
 
+/*********************************** Fonts  ***********************************/
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+h2,
+legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p {
+  color: rgb(74, 74, 74);
+  padding: 1rem;
+}
+
+/******************************* Tags in Header *******************************/
+header {
+  position: fixed;
+  height: 3rem;
+  width: 100%;
+  top: 0;
+
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0 1rem 0;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.header-limiter {
+  max-width: 1200px; /* limits the width of the header content */
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 1.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: flex-end;
+
+  margin-right: 1.5rem;
+}
+
+ul {
+  display: inline-flex;
+}
+
+li {
+  padding-left: 1rem;
+}
+
+li a {
+  padding: 0 5px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: opacity 300ms linear;
+}
+
+li a:hover {
+  opacity: 1;
+}
+
+.nodisplay,
+.desktop-menu {
+  display: none;
+}
+
+/******************************* Tags in Footer *******************************/
+footer {
+  position: absolute;
+  height: 3rem;
+  width: 100%;
+  bottom: 0;
+
+  border-top: 1px solid #ccc;
+  padding: 1rem 0 0.5rem 0;
+  /* margin-top: 0.5rem; */
+  box-sizing: border-box;
+}
+
+.footer-limiter {
+  max-width: 1200px; /* limits the width of the header content */
+  text-align: center;
+  margin: 0 auto;
+}
+
+footer a {
+  float: right;
+  margin-right: 1.5rem;
+}
+
+/***************************** Tags in Game Board *****************************/
+.game-board {
+  padding: 3rem 0.5rem;
+  margin: 0.5rem auto;
+  overflow: hidden;
+  max-height: calc(100vh - (2 * 3.5rem));
+  max-width: calc(100vw - (2 * 0.5rem));
+}
+
+
+
+
+
+
+
+/******************************** Media Views  ********************************/
 @media screen and (min-width: 445px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  header,
+  footer {
+    height: 4rem;
+  }
+
+  .game-board {
+    padding: 4rem 0.5rem;
+    max-height: calc(100vh - (2 * 4.5rem));
+  }
 }
 
 @media screen and (min-width: 778px) {
