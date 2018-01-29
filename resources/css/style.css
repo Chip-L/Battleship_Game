@@ -1,0 +1,44 @@
+/****************************** Universal Styles ******************************/
+
+html {
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+.mobile-show {
+  display: none;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  height: auto;
+  width: 100%;
+}
+
+.video-container {
+  width: 100%
+}
+
+.video-container video {
+  width: inherit;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+@media screen and (min-width: 445px) {
+}
+
+@media screen and (min-width: 778px) {
+  .desktop-menu {
+    display: inherit;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
