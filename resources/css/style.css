@@ -141,6 +141,84 @@ footer a {
   overflow: hidden;
   max-height: calc(100vh - (2 * 3.5rem));
   max-width: calc(100vw - (2 * 0.5rem));
+  font-size: 1rem;
+}
+
+table {
+}
+
+th, td {
+    height: 2rem;
+    width: 2rem;
+    padding: 1rem;
+
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-collapse: collapse;
+
+    text-align: center;
+    background-image: url('../images/watertile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: blue;
+
+}
+
+th,
+tr td:first-child {
+  font-weight: bold;
+  background-image: none;
+  background-color: transparent;
+}
+
+.hit {
+  background-image: url('../images/hitTile.png');
+}
+
+.miss {
+  background-image: url('../images/missTile.png');
+}
+
+.submarine {
+  background-image: url('../images/submarine.png');
+}
+
+.s5k {
+  background-image: url('../images/submarine5K.png');
+}
+
+.one {
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.two {
+  background-position: -4rem 0px;
+  background-size: cover;
+}
+
+.three {
+  background-position: -8rem 0px;
+  background-size: cover;
+}
+
+.four {
+  background-position: -12rem 0px;
+  background-size: cover;
+}
+
+.five {
+  background-position: -16rem 0px;
+  background-size: cover;
+}
+
+.vertical:before {
+  content: "";
+}
+
+.vertical {
+  transform: rotate(90deg);
 }
 
 /**************************** Custom Modal Dialog  ****************************/
@@ -248,6 +326,7 @@ footer a {
   .game-board {
     padding: 4rem 0.5rem;
     max-height: calc(100vh - (2 * 4.5rem));
+    font-size: 1.5rem;
   }
 
   #rules li {
