@@ -67,73 +67,180 @@
   <!-- game board -->
   <div id="game" class="game-board">
     <!-- mock start -->
-    <table>
-      <tr>
-        <th></th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>10</th>
-      </tr>
-      <tr>
-        <td>A</td>
-        <td class="hit"></td>
-        <td class="miss"></td>
-        <td class="submarine one"></td>
-        <td class="submarine two"></td>
-        <td class="submarine three"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="submarine one vertical"></td>
-        <td class="empty"></td>
-      </tr>
-      <tr>
-        <td>B</td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="submarine" colspan="3"></td>
-        <!-- <td class="empty"></td>
-        <td class="empty"></td> -->
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="submarine two vertical"></td>
-        <td class="empty"></td>
-      </tr>
-      <tr>
-        <td>C</td>
-        <td class="empty"></td>
-        <td class="s5k one"></td>
-        <td class="s5k two"></td>
-        <td class="s5k three"></td>
-        <td class="s5k four"></td>
-        <td class="s5k five"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="submarine three vertical"></td>
-        <td class="empty"></td>
-      </tr>
-      <tr>
-        <td>D</td>
-        <td class="empty"></td>
-        <td class="s5k" colspan="5"></td>
-        <!-- <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td> -->
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-      </tr>
-    </table>
+    <div class="player-area">
+      <h1 class="player-name">Player</h1>
+      <table id="player">
+        <tr>
+          <th></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td class="empty">
+            <div class="pegged hit"></div>
+          </td>
+          <td class="empty">
+            <div class="pegged miss"></div>
+          </td>
+          <td class="submarine one"></td>
+          <td class="submarine two"></td>
+          <td class="submarine three"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="submarine one vertical"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="submarine" colspan="3"></td>
+          <!-- <td class="empty"></td>
+          <td class="empty"></td> -->
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="submarine two vertical"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="submarine three vertical"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>D</td>
+          <td class="empty"></td>
+          <td class="aircraft-carrier one"></td>
+          <td class="aircraft-carrier two"></td>
+          <td class="aircraft-carrier three"></td>
+          <td class="aircraft-carrier four"></td>
+          <td class="aircraft-carrier five"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>E</td>
+          <td class="empty"></td>
+          <td class="aircraft-carrier" colspan="5"></td>
+          <!-- <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td> -->
+          <td class="empty"></td>
+          <td class="aircraft-carrier one vertical"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>F</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="aircraft-carrier two vertical"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>G</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="aircraft-carrier three vertical"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>H</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="aircraft-carrier four vertical"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>I</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="aircraft-carrier five vertical"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td>J</td>
+          <td class="empty">
+            <div class="pegged hit"></div>
+          </td>
+          <!-- <td class="empty"></td> -->
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="opponent-area">
+      <h1 class="player-name">Opponent</h1>
+      <table id="opponent">
+        <tr>
+          <th></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+        </tr>
+      </table>
+    </div>
     <!-- mock end -->
   </div>
 
