@@ -1,4 +1,8 @@
 /****************************** Universal Styles ******************************/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
@@ -148,13 +152,21 @@ footer a {
   font-size: 1rem;
 }
 
-.player-area,
-.opponent-area {
-  height: 800px;
-  width: 800px;
+.guess {
+  display: inline-block;
 }
 
+.board {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.player-area,
 .opponent-area {
+}
+
+.player-area {
   display: none;
 }
 
@@ -191,6 +203,35 @@ tr td:first-child {
   background-color: transparent;
 }
 
+/* creates the game's grid */
+.game-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* set the size of the sqaures */
+.game-table > div {
+  height: 3.25rem;
+  width: 3.25rem;
+  padding: 1rem;
+
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+
+  text-align: center;
+}
+
+/* cell displays */
+.empty {
+  background-image: url('../images/watertile.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: blue;
+}
+
+/* requires a sub div - add and remove as needed */
 .hit {
   /* background-image: url('../images/hitTile.png'); */
   background-color: red;
@@ -213,6 +254,7 @@ tr td:first-child {
   display: inline-block;
   margin: 5%;
 }
+
 .pegged::after {
   background-color: rgba(255, 255, 255, 0.3);
   content: '';
@@ -225,6 +267,7 @@ tr td:first-child {
   transform: rotate(40deg);
 }
 
+/* boat images */
 .submarine {
   background-image: url('../images/submarine.png');
 }
@@ -245,31 +288,33 @@ tr td:first-child {
   background-image: url('../images/aircraftCarrier.png');
 }
 
+/* picture position - offsets by the number of -rems plus the margin the rems have to change with the size of the box */
 .one {
   background-position: 0px 0px;
   background-size: cover;
 }
 
 .two {
-  background-position: -4rem 0px;
+  background-position-x: calc(-3.25rem + 3px);
   background-size: cover;
 }
 
 .three {
-  background-position: -8rem 0px;
+  background-position-x: calc(2 * (-3.25rem + 3px));
   background-size: cover;
 }
 
 .four {
-  background-position: -12rem 0px;
+  background-position-x: calc(3 * (-3.25rem + 3px));
   background-size: cover;
 }
 
 .five {
-  background-position: -16rem 0px;
+  background-position-x: calc(4 * (-3.25rem + 3px));
   background-size: cover;
 }
 
+/* direction offset - horizontal is default */
 .vertical {
   transform: rotate(90deg);
 }

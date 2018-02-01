@@ -9,6 +9,9 @@ ui.init = function () {
   $('.custom_modal_close').click(ui.closeModal);
 
   $(window).resize(ui.boardSize);
+
+  ui.makeBoard('player');
+  ui.makeBoard('opponent');
 };
 
 /*
@@ -37,4 +40,34 @@ ui.showRules = function () {
   $('.custom_inner_modal_box').load('./resources/html/rules.html');
 
   ui.openModal();
+};
+
+
+ui.makeBoard = function (boardID) {
+  let $board = $('#' + boardID);
+  let rowValue = ['0','A','B','C','D','E','F','G','H','I','J'];
+
+  $board.empty();
+
+  for(let rowCounter = 0; rowCounter < 11; rowCounter++) {
+    let row = 'row' + rowValue[rowCounter];
+    for(let colCounter = 0; colCounter < 11; colCounter++) {
+      let col = 'col' + colCounter;
+      let $newdiv = $('<div></div>' );
+
+      $newdiv.addClass(row).addClass(col);
+
+      if(rowCounter == 0 && colCounter ==0 ) {
+        /* do nothing */
+      } else if(rowCounter == 0 && colCounter > 0) {
+        $newdiv.text(colCounter);
+      } else if(rowCounter > 0 && colCounter == 0) {
+        $newdiv.text(rowValue[rowCounter]);
+      } else {
+        $newdiv.addClass('empty');
+      }
+
+      $board.append($newdiv)
+    }
+  }
 };
