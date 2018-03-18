@@ -13,11 +13,19 @@ body {
   color: rgb(32, 64, 86);
 }
 
+/* this defines the image size - customize the rest in the image location */
 .image-container {
   overflow: hidden;
 }
 
-.image-container img {
+/* image where height controls the size and width doesn't matter */
+.image-container.h img {
+  height: 100%;
+  width: auto;
+}
+
+/* image where width controls the size and height doesn't matter */
+.image-container.w img {
   height: auto;
   width: 100%;
 }
@@ -152,8 +160,18 @@ footer a {
   font-size: 1rem;
 }
 
-.guess {
+.select-ships {
   display: inline-block;
+}
+
+.ship-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ship-container .image-container {
+  height: 3.25rem;
 }
 
 .board {
@@ -173,34 +191,6 @@ footer a {
 .player-name {
   text-align: center;
   padding: .5rem;
-}
-
-table {
-}
-
-th, td {
-    height: 2rem;
-    width: 2rem;
-    padding: 1rem;
-
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
-    border-collapse: collapse;
-
-    text-align: center;
-    background-image: url('../images/watertile.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-color: blue;
-
-}
-
-th,
-tr td:first-child {
-  font-weight: bold;
-  background-image: none;
-  background-color: transparent;
 }
 
 /* creates the game's grid */

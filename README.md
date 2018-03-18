@@ -2,6 +2,8 @@
 
 This is a game that will allow a player to call out spots on a grid to attempt to locate the other player's Battleships. When all of the opponents ships are found, the player wins.
 
+Images of ships are from: http://www.navy.mil/viewGallery.asp
+
 [To Do](./ToDo.md)
 
 The game board has several pieces:

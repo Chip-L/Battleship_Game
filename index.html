@@ -66,14 +66,49 @@
 
   <!-- game board -->
   <div id="game" class="game-board">
-    <div class="guess">
-      guess div
+    <div class="select-ships">
+      <div class="ship-container">
+        <div class="image-container h">
+          <img src="resources\images\destroyer.png" alt="Destroyer">
+        </div>
+        <span>Destroyer</span><span>2 blocks</span>
+      </div>
+
+      <div class="ship-container">
+        <div class="image-container h">
+          <img src="resources\images\submarine.png" alt="Submarine">
+        </div>
+        <span>Submarine</span><span>3 blocks</span>
+      </div>
+
+      <div class="ship-container">
+        <div class="image-container h">
+          <img src="resources\images\cruiser.png" alt="Cruiser">
+        </div>
+        <span>Cruiser</span><span>3 blocks</span>
+      </div>
+
+      <div class="ship-container">
+        <div class="image-container h">
+          <img src="resources\images\battleship.png" alt="Battleship">
+        </div>
+        <span>Battleship</span><span>4 blocks</span>
+      </div>
+
+      <div class="ship-container">
+        <div class="image-container h">
+          <img src="resources\images\aircraftCarrier.png" alt="Aircraft Carrier">
+        </div>
+        <span>Aircraft Carrier</span><span>5 blocks</span>
+      </div>
     </div>
+
+    <!-- board -->
     <div class="board">
       <div class="player-area">
         <h1 class="player-name">Player</h1>
         <div class="game-table" id="player">
-          <!-- mock start 
+          <!-- mock start
           <div class="game-table" id="player">
             <div class="row0 col0"></div>
             <div class="row0 col1">1</div>
@@ -86,6 +121,7 @@
             <div class="row0 col8">8</div>
             <div class="row0 col9">9</div>
             <div class="row0 col10">10</div>
+
             <div class="rowA col0">A</div>
             <div class="rowA col1 empty">
               <div class="pegged hit"></div>
@@ -101,6 +137,7 @@
             <div class="rowA col8 empty"></div>
             <div class="rowA col9 empty"></div>
             <div class="rowA col10 empty"></div>
+
             <div class="rowB col0">B</div>
             <div class="rowB col1 empty"></div>
             <div class="rowB col2 empty"></div>
