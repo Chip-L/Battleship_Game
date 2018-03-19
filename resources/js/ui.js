@@ -12,6 +12,9 @@ ui.init = function () {
 
   ui.makeBoard('player');
   ui.makeBoard('opponent');
+  $('.opponent-area-container').hide();
+
+  $('#button').click(ui.switchGameStates);
 };
 
 /*
@@ -69,5 +72,22 @@ ui.makeBoard = function (boardID) {
 
       $board.append($newdiv)
     }
+  }
+
+  ui.switchGameStates = function () {
+    let $game = $('#game');
+
+    if( $game.hasClass('start-game') ) {
+      $game.removeClass('start-game');
+      $game.addClass('play-game');
+      $('.select-ships-container').hide();
+      $('.opponent-area-container').show();
+    } else {
+      $game.removeClass('play-game');
+      $game.addClass('start-game');
+      $('.opponent-area-container').hide();
+      $('.select-ships-container').show();
+    }
+
   }
 };

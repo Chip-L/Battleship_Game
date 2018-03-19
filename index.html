@@ -34,147 +34,161 @@
 	<![endif]-->
 </head>
 <body>
-  <header>
-    <div class="header-limiter">
-      <div class="logo">
-        <h1>Battleship</h1>
-      </div>
+	<div class="page">
+	  <header>
+	    <div class="header-limiter">
+	      <div class="logo">
+	        <h1>Battleship</h1>
+	      </div>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="#" class="rule">
-              <i class="fa fa-book" aria-hidden="true"></i>
-              <span class="desktop-menu">&nbsp;Rules</span>
-            </a>
-          </li>
-          <!-- <li>
-            <a href="#" class="settings">
-              <i class="fa fa-cog" aria-hidden="true"></i>
-              <span class="desktop-menu">
-                &nbsp;Settings
-              </span>
-            </a>
-          </li>
-          <li class="nodisplay">
-            <a href="#" class="win"></a>
-          </li> -->
-        </ul>
-      </nav>
-    </div>
-  </header>
+	      <nav>
+	        <ul>
+	          <li>
+	            <a href="#" class="rule">
+	              <i class="fa fa-book" aria-hidden="true"></i>
+	              <span class="desktop-menu">&nbsp;Rules</span>
+	            </a>
+	          </li>
+	          <!-- <li>
+	            <a href="#" class="settings">
+	              <i class="fa fa-cog" aria-hidden="true"></i>
+	              <span class="desktop-menu">
+	                &nbsp;Settings
+	              </span>
+	            </a>
+	          </li>
+	          <li class="nodisplay">
+	            <a href="#" class="win"></a>
+	          </li> -->
+	        </ul>
+	      </nav>
+	    </div>
+	  </header>
 
-  <!-- game board -->
-  <div id="game" class="game-board">
-    <div class="select-ships">
-      <div class="ship-container">
-        <div class="image-container h">
-          <img src="resources\images\destroyer.png" alt="Destroyer">
-        </div>
-        <span>Destroyer</span><span>2 blocks</span>
-      </div>
+	  <!-- game board -->
+		<!-- The game board will be a selection of items that will display dependng on the phase of the game.
+		start game, the grid will show select-ships and player-area
+		play game, the grid will show player-area and opponent-area
+		-->
+		<div id="game" class="game-board start-game">
+			<div class="select-ships-container">
+				<div class="select-ships">
+				<div class="ship-container">
+					<div class="image-container h">
+						<img src="resources\images\destroyer.png" alt="Destroyer">
+					</div>
+					<span>Destroyer</span><span>2 blocks</span>
+				</div>
 
-      <div class="ship-container">
-        <div class="image-container h">
-          <img src="resources\images\submarine.png" alt="Submarine">
-        </div>
-        <span>Submarine</span><span>3 blocks</span>
-      </div>
+				<div class="ship-container">
+					<div class="image-container h">
+						<img src="resources\images\submarine.png" alt="Submarine">
+					</div>
+					<span>Submarine</span><span>3 blocks</span>
+				</div>
 
-      <div class="ship-container">
-        <div class="image-container h">
-          <img src="resources\images\cruiser.png" alt="Cruiser">
-        </div>
-        <span>Cruiser</span><span>3 blocks</span>
-      </div>
+				<div class="ship-container">
+					<div class="image-container h">
+						<img src="resources\images\cruiser.png" alt="Cruiser">
+					</div>
+					<span>Cruiser</span><span>3 blocks</span>
+				</div>
 
-      <div class="ship-container">
-        <div class="image-container h">
-          <img src="resources\images\battleship.png" alt="Battleship">
-        </div>
-        <span>Battleship</span><span>4 blocks</span>
-      </div>
+				<div class="ship-container">
+					<div class="image-container h">
+						<img src="resources\images\battleship.png" alt="Battleship">
+					</div>
+					<span>Battleship</span><span>4 blocks</span>
+				</div>
 
-      <div class="ship-container">
-        <div class="image-container h">
-          <img src="resources\images\aircraftCarrier.png" alt="Aircraft Carrier">
-        </div>
-        <span>Aircraft Carrier</span><span>5 blocks</span>
-      </div>
-    </div>
+				<div class="ship-container">
+					<div class="image-container h">
+						<img src="resources\images\aircraftCarrier.png" alt="Aircraft Carrier">
+					</div>
+					<span>Aircraft Carrier</span><span>5 blocks</span>
+				</div>
+			</div>
+			</div>
 
-    <!-- board -->
-    <div class="board">
-      <div class="player-area">
-        <h1 class="player-name">Player</h1>
-        <div class="game-table" id="player">
-          <!-- mock start
-          <div class="game-table" id="player">
-            <div class="row0 col0"></div>
-            <div class="row0 col1">1</div>
-            <div class="row0 col2">2</div>
-            <div class="row0 col3">3</div>
-            <div class="row0 col4">4</div>
-            <div class="row0 col5">5</div>
-            <div class="row0 col6">6</div>
-            <div class="row0 col7">7</div>
-            <div class="row0 col8">8</div>
-            <div class="row0 col9">9</div>
-            <div class="row0 col10">10</div>
+			<div class="player-area-container">
+				<div class="player-area">
+					<h1 class="player-name">Player</h1>
+					<div class="game-table" id="player">
+						<!-- mock start
+						<div class="game-table" id="player">
+						<div class="row0 col0"></div>
+						<div class="row0 col1">1</div>
+						<div class="row0 col2">2</div>
+						<div class="row0 col3">3</div>
+						<div class="row0 col4">4</div>
+						<div class="row0 col5">5</div>
+						<div class="row0 col6">6</div>
+						<div class="row0 col7">7</div>
+						<div class="row0 col8">8</div>
+						<div class="row0 col9">9</div>
+						<div class="row0 col10">10</div>
 
-            <div class="rowA col0">A</div>
-            <div class="rowA col1 empty">
-              <div class="pegged hit"></div>
-            </div>
-            <div class="rowA col2 empty">
-              <div class="pegged miss"></div>
-            </div>
-            <div class="rowA col3 submarine one vertical"></div>
-            <div class="rowA col4 empty"></div>
-            <div class="rowA col5 submarine one"></div>
-            <div class="rowA col6 submarine two"></div>
-            <div class="rowA col7 submarine three"></div>
-            <div class="rowA col8 empty"></div>
-            <div class="rowA col9 empty"></div>
-            <div class="rowA col10 empty"></div>
+						<div class="rowA col0">A</div>
+						<div class="rowA col1 empty">
+						<div class="pegged hit"></div>
+					</div>
+					<div class="rowA col2 empty">
+					<div class="pegged miss"></div>
+					<div class="rowA col3 submarine one vertical"></div>
+					<div class="rowA col4 empty"></div>
+					<div class="rowA col5 submarine one"></div>
+					<div class="rowA col6 submarine two"></div>
+					<div class="rowA col7 submarine three"></div>
+					<div class="rowA col8 empty"></div>
+					<div class="rowA col9 empty"></div>
+					<div class="rowA col10 empty"></div>
 
-            <div class="rowB col0">B</div>
-            <div class="rowB col1 empty"></div>
-            <div class="rowB col2 empty"></div>
-            <div class="rowB col3 submarine two vertical"></div>
-            <div class="rowB col4 empty"></div>
-          mock end -->
-        </div>
-      </div>
+					<div class="rowB col0">B</div>
+					<div class="rowB col1 empty"></div>
+					<div class="rowB col2 empty"></div>
+					<div class="rowB col3 submarine two vertical"></div>
+					<div class="rowB col4 empty"></div>
+				</div>
+				mock end -->
+			</div>
+			<!-- /div game-table -->
+		</div>
+				<!-- /div player-area -->
+			</div>
 
-      <div class="opponent-area">
-        <h1 class="player-name">Opponent</h1>
-        <div class="game-table" id="opponent">
-        </div>
-      </div>
-    </div>
-  </div>
+			<div class="opponent-area-container">
+				<div class="opponent-area">
+					<h1 class="player-name">Opponent</h1>
+					<div class="game-table" id="opponent">
+					</div>
+				</div>
+				<!-- </div>  -->
+			</div>
+		</div>
+		<!-- /div game -->
 
-  <footer>
-    <div class="footer-limiter">
-      <a href="https://chip-l.github.io/">chip-l.github.io</a>
-    </div>
-  </footer>
+	  <footer>
+	    <div class="footer-limiter">
+				<button type="button" name="button" id="button">switch phase</button>
+	      <a href="https://chip-l.github.io/">chip-l.github.io</a>
+	    </div>
+	  </footer>
 
 
-  <!-- -  -  -  -  -  -  -  -  Custom Modal Dialog   -  -  -  -  -  -  -  - -->
-  <!-- $block_page - dark background  -->
-  <div class="custom_block_page">
-    <!-- $pop_up -->
-    <div class="custom_modal_box">
-      <!-- $close button -->
-      <a href="#" class="custom_modal_close"></a>
-      <!-- $inner -->
-      <div class="custom_inner_modal_box">
-        loading...
-      </div>
-    </div>
-  </div>
+	  <!-- -  -  -  -  -  -  -  - Custom Modal Dialog  -  -  -  -  -  -  -  - -->
+	  <!-- $block_page - dark background  -->
+	  <div class="custom_block_page">
+	    <!-- $pop_up -->
+	    <div class="custom_modal_box">
+	      <!-- $close button -->
+	      <a href="#" class="custom_modal_close"></a>
+	      <!-- $inner -->
+	      <div class="custom_inner_modal_box">
+	        loading...
+	      </div>
+	    </div>
+	  </div>
+	</div> <!-- /page -->
 
 
 	<!-- jQuery -->

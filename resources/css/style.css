@@ -59,9 +59,43 @@ p {
   padding: 1rem;
 }
 
+/******************************** Page Layout  ********************************/
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  position: fixed;
+  display: grid;
+  /* grid-template-rows: auto auto auto; */
+  grid-template-areas:
+    'header'
+    'board'
+    'footer';
+}
+
+.game-board {
+  grid-area: board;
+  display: grid;
+  grid-template-columns: 45vw 45vw;
+  grid-column-gap: 5vw;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.start-game {
+  grid-template-areas: 'select-ships' 'player-area';
+}
+
+.play-game {
+  grid-template-areas: 'player-area' 'opponent-area';
+}
+
 /******************************* Tags in Header *******************************/
 header {
-  position: fixed;
+  grid-area: header;
+  /*position: fixed;*/
   height: 3rem;
   width: 100%;
   top: 0;
@@ -124,7 +158,8 @@ li a:hover {
 
 /******************************* Tags in Footer *******************************/
 footer {
-  position: absolute;
+  grid-area: footer;
+  /* position: absolute; */
   height: 3rem;
   width: 100%;
   bottom: 0;
@@ -147,45 +182,55 @@ footer a {
 }
 
 /***************************** Tags in Game Board *****************************/
-.game-board {
+
+.select-ships-container {
+  grid-area: select-ships;
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  padding: 3rem 0.5rem;
-  margin: 0.5rem auto;
-  overflow: hidden;
-  max-height: calc(100vh - (2 * 3.5rem));
-  max-width: calc(100vw - (2 * 0.5rem));
-  font-size: 1rem;
 }
 
 .select-ships {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ship-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  padding: 0.625rem;
 }
 
 .ship-container .image-container {
   height: 3.25rem;
 }
 
-.board {
-  display: inline-block;
-  width: -moz-fit-content;
-  width: fit-content;
-}
 
 .player-area,
 .opponent-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* padding: 3rem 0.5rem;
+  margin: 0.5rem auto; */
+  overflow: hidden;
+  max-height: calc(100vh - (2 * 3.5rem));
+  max-width: calc(100vw - (2 * 0.5rem));
+  font-size: 1rem;
 }
 
-.player-area {
-  display: none;
+.player-area-container {
+  grid-area: player-area;
+  display: flex;
+}
+
+.opponent-area-container {
+  grid-area: opponent-area;
+  display: flex;
 }
 
 .player-name {
@@ -193,6 +238,7 @@ footer a {
   padding: .5rem;
 }
 
+/********************************* Game Grid  *********************************/
 /* creates the game's grid */
 .game-table {
   display: grid;
@@ -212,6 +258,7 @@ footer a {
   text-align: center;
 }
 
+/******************************** Cell States  ********************************/
 /* cell displays */
 .empty {
   background-image: url('../images/watertile.png');
@@ -412,13 +459,21 @@ footer a {
   }
 
   .game-board {
-    padding: 4rem 0.5rem;
-    max-height: calc(100vh - (2 * 4.5rem));
+    /* padding: 4rem 0.5rem;
+    max-height: calc(100vh - (2 * 4.5rem)); */
     font-size: 1.5rem;
   }
 
   #rules li {
     font-size: 1.25rem;
+  }
+
+  .start-game {
+    grid-template-areas: 'select-ships player-area';
+  }
+
+  .play-game {
+    grid-template-areas: 'player-area opponent-area';
   }
 }
 
