@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Chip-L/Battleship_Game#readme",
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^10.1.0"
   }
 }
